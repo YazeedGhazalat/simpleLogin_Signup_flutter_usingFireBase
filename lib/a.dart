@@ -15,19 +15,22 @@ class _aPageState extends State<aPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          IconButton(
+        actions: [],
+      ),
+      body: Center(
+        child: Container(
+          child: IconButton(
               onPressed: (() {
                 _auth.signOut();
                 Navigator.pop(context);
               }),
               icon: Icon(
-                Icons.sign_language_outlined,
+                size: 90,
+                Icons.logout,
                 color: Colors.black,
-              ))
-        ],
+              )),
+        ),
       ),
-      body: Container(),
     );
   }
 }
